@@ -55,7 +55,7 @@ function setStylesCSS() {
     v.setAttribute('style', 'font-size: 28px; letter-spacing: 0.01em;');
   });
   refs.labels.forEach(l => {
-    l.setAttribute('style', 'text-transform: uppercase; font-size: 12px;');
+    l.setAttribute('style', 'text-transform: uppercase; font-size: 10px;');
   });
 }
 
