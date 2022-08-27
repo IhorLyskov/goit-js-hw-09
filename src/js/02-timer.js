@@ -16,7 +16,7 @@ const refs = {
   dataSeconds: document.querySelector('[data-seconds]'),
 };
 
-setStylesCSS();
+setInlineStyles();
 
 let dataDateTime = setInitDateTime();
 let idIntervalSecond = 0;
@@ -39,7 +39,7 @@ flatpickr('#datetime-picker', {
   },
 });
 
-function setStylesCSS() {
+function setInlineStyles() {
   refs.buttonStart.setAttribute('disabled', '');
   refs.timer.setAttribute(
     'style',
