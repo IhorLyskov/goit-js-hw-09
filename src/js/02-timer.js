@@ -39,26 +39,6 @@ flatpickr('#datetime-picker', {
   },
 });
 
-function setInlineStyles() {
-  refs.buttonStart.setAttribute('disabled', '');
-  refs.timer.setAttribute(
-    'style',
-    'display: flex; align-items: center; margin: 8px 0 0 -6px;'
-  );
-  refs.fields.forEach(f => {
-    f.setAttribute(
-      'style',
-      'display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 6px;'
-    );
-  });
-  refs.values.forEach(v => {
-    v.setAttribute('style', 'font-size: 28px; letter-spacing: 0.01em;');
-  });
-  refs.labels.forEach(l => {
-    l.setAttribute('style', 'text-transform: uppercase; font-size: 10px;');
-  });
-}
-
 refs.buttonStart.addEventListener('click', intervalStart);
 
 function intervalStart() {
@@ -121,4 +101,24 @@ function setDateTime(data) {
   refs.dataHours.textContent = addLeadingZero(data.hours);
   refs.dataMinutes.textContent = addLeadingZero(data.minutes);
   refs.dataSeconds.textContent = addLeadingZero(data.seconds);
+}
+
+function setInlineStyles() {
+  refs.buttonStart.setAttribute('disabled', '');
+  refs.timer.setAttribute(
+    'style',
+    'display: flex; align-items: center; margin: 8px 0 0 -6px;'
+  );
+  refs.fields.forEach(f => {
+    f.setAttribute(
+      'style',
+      'display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 6px;'
+    );
+  });
+  refs.values.forEach(v => {
+    v.setAttribute('style', 'font-size: 28px; letter-spacing: 0.01em;');
+  });
+  refs.labels.forEach(l => {
+    l.setAttribute('style', 'text-transform: uppercase; font-size: 10px;');
+  });
 }
